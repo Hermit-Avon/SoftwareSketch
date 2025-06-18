@@ -9,18 +9,10 @@ include_directories(
 link_directories(${PCAP_LIBRARY_DIRS})
 
 add_executable(countsketch
-    countsketch.cpp
+    main.cpp
 )
 
 target_link_libraries(countsketch
     ${PCAP_LIBRARIES}
     pthread
 )
-
-if(EXISTS "${CMAKE_SOURCE_DIR}/include/xxhash.c")
-    target_sources(countsketch PRIVATE ${CMAKE_SOURCE_DIR}/include/xxhash.c)
-endif()
-
-if(EXISTS "${CMAKE_SOURCE_DIR}/include/protocol_parsing.c")
-    target_sources(countsketch PRIVATE ${CMAKE_SOURCE_DIR}/include/protocol_parsing.c)
-endif()
