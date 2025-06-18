@@ -4,7 +4,7 @@ PROJECT_NAME = SoftwareSketch
 
 CXX = clang++
 
-SKETCH = countsketch
+SKETCH = flowradar
 
 all:
 	$(MAKE) $(SKETCH)

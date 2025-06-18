@@ -64,16 +64,11 @@ void MVSketch::Update(unsigned char* key, val_tp val) {
     }
 }
 
-typedef struct {
-    /// overloaded operation
+typedef struct key_tp_hash {
     long operator() (const key_tp &k) const { return xxh32(&k, LGN, 388650253); }
 } key_tp_hash;
 
-/**
- * Object for equality
- */
-typedef struct {
-    /// overloaded operation
+typedef struct key_tp_eq {
     bool operator() (const key_tp &x, const key_tp &y) const {
         return memcmp(&x, &y, LGN)==0;
     }
