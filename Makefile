@@ -4,7 +4,7 @@ PROJECT_NAME = SoftwareSketch
 
 CXX = clang++
 
-SKETCH = countmin
+SKETCH = countsketch
 
 all:
 	$(MAKE) $(SKETCH)

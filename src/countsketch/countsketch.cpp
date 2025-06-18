@@ -4,23 +4,14 @@
 #include <time.h>
 #include <pthread.h>
 
-#include <iostream>
-#include <unordered_map>
-#include <string>
 #include <cstring>
-#include <fstream>
 #include <time.h>
-#include <set>
-
 #include <cinttypes>
 
-
-#include "countmin.h"
-
 #include "../../include/protocol_parsing.h"
+#include "countsketch.h"
 
 using namespace std;
-
 
 int pkt_cnt = 10000;
 int pkt_total = 10000;
@@ -28,8 +19,7 @@ long long time_total_ns = 0;
 long long cycle_total = 0;
 fivetuple *ft = (fivetuple *)malloc(sizeof(fivetuple));
 // definetion template + auguments_list
-CountMin cm = CountMin(8, 327680);
-
+CountSketch<4, 8> cs = CountSketch<4, 8>(10485760);
 static inline uint64_t rdtsc()
 {
     unsigned int lo, hi;
@@ -62,7 +52,7 @@ void got_packet(u_char *argv, const struct pcap_pkthdr *header, const u_char *pa
     ft->dport = udp->dport;
     ft->proto = ip->proto;
 
-    cm.update(ft, 1);
+    cs.insert(ft);
 
     uint64_t time_end = get_time();
     int end_cycle = rdtsc();
@@ -112,7 +102,7 @@ int main()
     struct bpf_program filter;
     // char filter_exp[] = "port 80"; /*filter expressiong*/
     char filter_exp[] = ""; /*filter expressiong*/
-    bpf_u_int32 mask = 0;       /*net mask*/
+    bpf_u_int32 mask=0;       /*net mask*/
     pcap_compile(open_dev, &filter, filter_exp, 0, mask);
     pcap_setfilter(open_dev, &filter);
 
