@@ -1,0 +1,15 @@
+本目录下为9种基于软件方式Sketch的实现。
+
+每一种实现都在各自的文件夹下
+
+以CM为例，其目录下文件为
+1  cm.h  main  main.c  murmur3.h
+
+其中cm.h定义了sketch的数据结构与更新函数，以供main.c里面进行调用
+
+murmur3.h 为 murmurhash3，可能需要换。如果你想把它换成xxhash的话需要将所有用到的的hash函数进行修改。
+
+main.c里使用pcap库直接从网卡处读取数据包，并在相关的函数里进行读取。你不需要了解细节，只需要知道每次只要修改形如 CM里面的87行，以及117-124行即可，它们分别是sketch初始化以及sketch更新操作
+
+使用 g++ -o 1 main.c -lpcap 进行编译
+

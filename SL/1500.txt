@@ -1,0 +1,4 @@
+Device: ens3f1np1
+14455854
+throughoutput:691761 
+avg cycles/packet:4738 

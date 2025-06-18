@@ -1,0 +1,81 @@
+CM  1  cycles:4634.0  throughput:652999
+CM  2  cycles:4673.0  throughput:645790
+CM  3  cycles:4680.0  throughput:647279
+CM  4  cycles:4681.0  throughput:650151
+CM  5  cycles:4727.0  throughput:642267
+CM  6  cycles:6005.0  throughput:612049
+CM  7  cycles:4756.0  throughput:636800
+CM  8  cycles:4601.0  throughput:657887
+
+CS  1  cycles:6838.0  throughput:406507
+CS  2  cycles:6872.0  throughput:404575
+CS  3  cycles:6924.0  throughput:404839
+CS  4  cycles:7303.0  throughput:374085
+CS  5  cycles:7292.0  throughput:374937
+CS  6  cycles:7390.0  throughput:370461
+CS  7  cycles:6945.0  throughput:401373
+CS  8  cycles:6950.0  throughput:401046
+
+CBF  1  cycles:4456.0  throughput:693467
+CBF  2  cycles:4439.0  throughput:690044
+CBF  3  cycles:4473.0  throughput:685591
+CBF  4  cycles:5011.0  throughput:686103
+CBF  5  cycles:4499.0  throughput:679007
+CBF  6  cycles:4438.0  throughput:689017
+CBF  7  cycles:4412.0  throughput:694470
+CBF  8  cycles:4457.0  throughput:685427
+
+elastic  1  cycles:2608.0  throughput:1488833
+elastic  2  cycles:2493.0  throughput:1538979
+elastic  3  cycles:2647.0  throughput:1451441
+elastic  4  cycles:2629.0  throughput:1463076
+elastic  5  cycles:2091.0  throughput:1820625
+elastic  6  cycles:2602.0  throughput:1476760
+elastic  7  cycles:2528.0  throughput:1531466
+elastic  8  cycles:2105.0  throughput:1821552
+
+flowradar  1  cycles:5444.0  throughput:537871
+flowradar  2  cycles:5795.0  throughput:490470
+flowradar  3  cycles:5438.0  throughput:537072
+flowradar  4  cycles:5430.0  throughput:536682
+flowradar  5  cycles:5433.0  throughput:537770
+flowradar  6  cycles:5527.0  throughput:533240
+flowradar  7  cycles:5355.0  throughput:543582
+flowradar  8  cycles:5672.0  throughput:512481
+
+UnivMon  1  cycles:9897.0  throughput:269890
+UnivMon  2  cycles:9804.0  throughput:272259
+UnivMon  3  cycles:9758.0  throughput:274306
+UnivMon  4  cycles:9725.0  throughput:274450
+UnivMon  5  cycles:9813.0  throughput:273436
+UnivMon  6  cycles:9794.0  throughput:273653
+UnivMon  7  cycles:9880.0  throughput:270658
+UnivMon  8  cycles:9802.0  throughput:273663
+
+nitrosketch  1  cycles:3419.0  throughput:936408
+nitrosketch  2  cycles:3807.0  throughput:849166
+nitrosketch  3  cycles:3736.0  throughput:871201
+nitrosketch  4  cycles:3789.0  throughput:852333
+nitrosketch  5  cycles:3860.0  throughput:846694
+nitrosketch  6  cycles:3720.0  throughput:876436
+nitrosketch  7  cycles:3805.0  throughput:854850
+nitrosketch  8  cycles:3802.0  throughput:846585
+
+SlidingSketch  1  cycles:10345.0  throughput:257240
+SlidingSketch  2  cycles:10272.0  throughput:258421
+SlidingSketch  3  cycles:10267.0  throughput:258893
+SlidingSketch  4  cycles:10399.0  throughput:255618
+SlidingSketch  5  cycles:10285.0  throughput:258537
+SlidingSketch  6  cycles:10360.0  throughput:257012
+SlidingSketch  7  cycles:10607.0  throughput:249805
+SlidingSketch  8  cycles:10332.0  throughput:256995
+
+mvsketch  1  cycles:3862.0  throughput:834345
+mvsketch  2  cycles:3773.0  throughput:860459
+mvsketch  3  cycles:5638.0  throughput:852138
+mvsketch  4  cycles:3674.0  throughput:889156
+mvsketch  5  cycles:8457.0  throughput:852741
+mvsketch  6  cycles:3746.0  throughput:863961
+mvsketch  7  cycles:3771.0  throughput:861373
+mvsketch  8  cycles:3675.0  throughput:878955
+
