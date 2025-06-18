@@ -4,13 +4,13 @@ PROJECT_NAME = SoftwareSketch
 
 CXX = clang++
 
-SKETCH = flowradar
+SKETCH = elasticsketch
 
 all:
 	$(MAKE) $(SKETCH)
 
 $(SKETCH): 
-	$(CXX) -g -Wall -o build/$(SKETCH)  src/$(SKETCH)/$(SKETCH).cpp -lpcap
+	$(CXX) -g -Wall -o build/$(SKETCH)  src/$(SKETCH)/main.cpp -lpcap
 
 clean:
-	rm build/*
+	rm -rf build/*
