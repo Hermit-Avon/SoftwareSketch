@@ -7,6 +7,7 @@
 #include <time.h>
 #include "elasticsketch.h"
 #include "../../include/protocol_parsing.h"
+#include "../../config.h"
 
 using namespace std;
 
@@ -111,7 +112,7 @@ int main()
     const char *dev;
     char errbuf[PCAP_ERRBUF_SIZE];
     // dev = pcap_lookupdev(errbuf);
-    dev = "lo";
+    dev = ETH_NAME;
     printf("Device: %s\n", dev); /*print our device name*/
 
     /*open device and sniff
