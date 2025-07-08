@@ -1,6 +1,7 @@
 import os
 import time
-file_list = ['CM','CS','CBF','elastic','flowradar','UnivMon' , 'nitrosketch', 'SlidingSketch', 'mvsketch']
+import subprocess
+file_list = ['countmin','countsketch','cbf','elasticsketch','flowradar','univmon' , 'nitrosketch', 'slidingsketch', 'mv']
 a = dict()
 b = dict()
 times_of_run = 1
@@ -15,9 +16,9 @@ for i in file_list:
             res_1 = 0
             res_2 = 0
             for j in range(times_of_run):
-                cmd = './'+i+'/'+str(1)
+                cmd = f'sudo ./build/src/{i}/{i}'
                 print(cmd)
-                str_1 = os.popen(cmd).read()
+                str_1 = subprocess.getoutput(cmd)
                 str_1 = str_1.replace('\n','')
                 str_1 = str_1.replace('\r','')
                 str_1 = str_1.split(' ')
@@ -38,4 +39,4 @@ print(a)
 print(b)
 print(t2-t1)
 #TODO: 重新写测试脚本
-            
+
